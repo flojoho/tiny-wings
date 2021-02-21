@@ -1,6 +1,5 @@
 
 
-
 INBOX
 
 
@@ -8,13 +7,19 @@ INBOX
 
 
 dec: how to realize ground collision?
-  working solution: check if velocity vector intersects any of the ground segments (treat player as point for now)
+  mvp: check if velocity vector intersects any of the ground segments (treat player as point for now)
   option: figure out how circle/sement collision works
-  option: just check if player object is below the terrain surface ()
+  option: just check if player object is below the terrain surface
+    player could pass through terrain peaks this way though (not such a big deal for an mvp though)
+
+
+
+
 
 collision response
-  friction/collision dampening
-    complete removal of normal component?
+  mvp: elastic collision
+  working solution: multiply normal component of velocitiy vector with constant factor? (0 < c < 1)
+  option: complete removal of normal component?
 
 increase gravity on keypress (space? and/or keydown?)
 
